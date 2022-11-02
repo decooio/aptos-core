@@ -741,10 +741,10 @@ module aptos_framework::stake {
         operator: &signer,
         pool_address: address
     ) acquires StakePool, ValidatorConfig, ValidatorSet {
-        assert!(
-            staking_config::get_allow_validator_set_change(&staking_config::get()),
-            error::invalid_argument(ENO_POST_GENESIS_VALIDATOR_SET_CHANGE_ALLOWED),
-        );
+        // assert!(
+        //     staking_config::get_allow_validator_set_change(&staking_config::get()),
+        //     error::invalid_argument(ENO_POST_GENESIS_VALIDATOR_SET_CHANGE_ALLOWED),
+        // );
 
         join_validator_set_internal(operator, pool_address);
     }
@@ -880,11 +880,11 @@ module aptos_framework::stake {
         operator: &signer,
         pool_address: address
     ) acquires StakePool, ValidatorSet {
-        let config = staking_config::get();
-        assert!(
-            staking_config::get_allow_validator_set_change(&config),
-            error::invalid_argument(ENO_POST_GENESIS_VALIDATOR_SET_CHANGE_ALLOWED),
-        );
+        // let config = staking_config::get();
+        // assert!(
+        //     staking_config::get_allow_validator_set_change(&config),
+        //     error::invalid_argument(ENO_POST_GENESIS_VALIDATOR_SET_CHANGE_ALLOWED),
+        // );
 
         assert_stake_pool_exists(pool_address);
         let stake_pool = borrow_global_mut<StakePool>(pool_address);
