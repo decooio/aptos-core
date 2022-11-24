@@ -6,8 +6,8 @@ permissions:
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 */8 * * *"
+  # schedule:
+  #   - cron: "0 */8 * * *"
 
 jobs:
   # Test under sub optimal circumstances (network delay and different node processing speed)

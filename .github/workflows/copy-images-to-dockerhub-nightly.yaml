@@ -1,8 +1,8 @@
 name: Copy images to dockerhub nightly
 on:
-  schedule:
-    # 9am PST (16:00 UTC).
-    - cron: "0 16 * * *"
+  # schedule:
+  #   # 9am PST (16:00 UTC).
+  #   - cron: "0 16 * * *"
 
 permissions:
   contents: read

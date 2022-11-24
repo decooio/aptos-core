@@ -1,8 +1,8 @@
 name: "Forge Continuous"
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 * * * *"
+  # schedule:
+  #   - cron: "0 * * * *"
   pull_request:
     paths:
       - ".github/workflows/forge-continuous.yaml"

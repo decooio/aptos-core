@@ -18,8 +18,8 @@ on:
   # Allow triggering manually
   workflow_dispatch:
   # Until enabled on all PRs, run continuously at the beginning of each hour
-  schedule:
-    - cron: "0 * * * *"
+  # schedule:
+  #   - cron: "0 * * * *"
 
 env:
   HAS_BUILDPULSE_SECRETS: ${{ secrets.BUILDPULSE_ACCESS_KEY_ID != '' && secrets.BUILDPULSE_SECRET_ACCESS_KEY != '' }}
